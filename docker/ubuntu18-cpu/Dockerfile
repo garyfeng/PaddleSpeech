@@ -1,10 +1,10 @@
 FROM registry.baidubce.com/paddlepaddle/paddle:2.2.2
 LABEL maintainer="paddlesl@baidu.com"
 
-RUN apt-get update \
-  && apt-get install libsndfile-dev \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+RUN apt-get update 
+RUN apt-get install -y libsndfile-dev 
+RUN apt-get clean 
+RUN rm -rf /var/lib/apt/lists/*
 
 RUN git clone --depth 1 https://github.com/PaddlePaddle/PaddleSpeech.git /home/PaddleSpeech  
 RUN pip3 uninstall mccabe -y ; exit 0;
