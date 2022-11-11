@@ -12,6 +12,6 @@ RUN pip3 install multiprocess==0.70.12 importlib-metadata==4.2.0 dill==0.3.4
 
 WORKDIR /home/PaddleSpeech/
 RUN python setup.py bdist_wheel
-RUN pip install dist/*.whl -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip install dist/*.whl 
 
 CMD ['bash']
