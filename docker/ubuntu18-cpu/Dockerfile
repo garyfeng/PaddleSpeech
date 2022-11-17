@@ -14,4 +14,4 @@ WORKDIR /home/PaddleSpeech/
 RUN python setup.py bdist_wheel
 RUN pip install dist/*.whl 
 
-CMD ['bash']
+CMD ['/bin/bash']
